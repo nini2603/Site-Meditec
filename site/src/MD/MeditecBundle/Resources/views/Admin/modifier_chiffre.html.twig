@@ -1,0 +1,83 @@
+{% extends "::admin.html.twig" %}
+
+{% block title %}{{ parent() }} - Accueil {% endblock %}
+
+{% block contend %}
+<!-- Page Content-->
+<main class="page-content">
+  <section class="section section-inset-1">
+    <div class="container">          
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <section class="section section-inset-3">
+            <h4>Modifier un chiffre</h4><hr/>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+             <div class="row row-55 clearleft-custom">
+              <div class="col-12 col-md-6">
+                <div class="row row-10">
+                    <div class="col-12">
+                        <div class="input-group">
+                         {{ form_label(form.intitule, "Intitulé ...", {'label_attr': {'class': 'form-label'}}) }}
+                         {{ form_widget(form.intitule, {'attr': {'class': 'form-input'}}) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-12">
+                        <div class="input-group">
+                             {{ form_label(form.chiffre, "Chiffre ...", {'label_attr': {'class': 'form-label'}}) }}
+                             {{ form_widget(form.chiffre, {'attr': {'class': 'form-input'}}) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-12">
+                        <div class="input-group">
+                             {{ form_label(form.ordre, "Ordre ...", {'label_attr': {'class': 'form-label'}}) }}
+                             {{ form_widget(form.ordre, {'attr': {'class': 'form-input'}}) }}
+                        </div>
+                    </div>
+                    <div class="col-12 text-right">
+                      <button class="btn btn-success btn-sm" type="submit">Enregistrer</button>
+                    </div>
+                    <div class="col-12 text-center">
+                    {% if errors is not empty %}
+                        <div class="alert alert-danger" role="alert">{{ errors }}</div>
+                    {% endif %}
+                    {% if msg is not empty %}
+                        <div class="alert alert-success" role="alert">{{ msg }}</div>
+                    {% endif %}
+                    </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 ">
+                    <div class="col-12 bg-light">
+                     <div id="chiffre" class="counter">{{ unChiffre.chiffre}}</div>
+                     <p id="intitule" class="h5 fw-l text-transform-none letter-spacing">{{ unChiffre.intitule }}</p>
+                    </div> 
+              </div>          
+            </div>
+             <!--</form>-->
+            {{ form_end(form) }}
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+
+$(document).keyup(function(){
+      
+        var intitule = '';
+        intitule=$('#md_meditecbundle_chiffre_intitule').val();
+        if(intitule == ''){ intitule='Intitulé'; }
+        $('#intitule').replaceWith('<p id="intitule" class="h5 fw-l text-transform-none letter-spacing">'+intitule+'</p>');
+        var chiffre = 0;
+        chiffre=$('#md_meditecbundle_chiffre_chiffre').val();
+        if(chiffre == ''){ chiffre='0'; }
+        $('#chiffre').replaceWith('<div id="chiffre" class="counter">'+chiffre+'</div>');
+ });
+</script>
+
+{% endblock %}
+
+
+

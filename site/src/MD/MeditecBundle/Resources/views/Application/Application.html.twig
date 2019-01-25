@@ -1,0 +1,89 @@
+{% extends "::meditec.html.twig" %}
+
+{% block  title %}
+{{ parent() }} 
+- Application {% endblock %}
+{% block selection %} {% endblock %}
+{% block contend %}
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Content-->
+      <main class="page-content">
+        <section class="section section-inset-1">
+          <div class="container">
+            <h2 class="text-center">{{ pageRadio.titre }}</h2>
+            <hr>
+            <div class="row row-45">
+              <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left"><img src="{{ asset('uploads/img_radiologie/'~ pageRadio.image) }}" alt="{{ pageRadio.alt }}"></div>
+              <div class="col-12 col-md-12 col-lg-6 text-md-left well2">
+                <p>{{ pageRadio.text }}</p>
+                <div class="row row-45 offset-custom-2">
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone1 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre1 }}</a></h6>
+                        <p> {{ pageRadio.text1}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone2 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre2 }}</a></h6>
+                        <p>{{ pageRadio.text2 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone3 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre3 }}</a></h6>
+                        <p>pageRadio.text3</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone4 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre4 }}</a></h6>
+                        <p>{{ pageRadio.text4 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {% if listeProduits %}
+        <section class="section bg-accent">
+          <div class="container">
+            <h2>Nos produits</h2>
+            <hr>
+            <div class="row clearleft-custom-1 row-55">
+            {% for  produit in listeProduits %}
+              <div class="col-12 col-md-6 col-xl-4">
+                <div class="thumbnail thumbnail-mod-2"><img src="{{ asset('uploads/img_radiologie_produit/'~ produit.image) }}" alt="{{ produit.alt }}">
+                  <div class="caption-mod-1">
+                    <h4 class="text-success-custom"> {{ produit.titre }}</h4>
+                    <p>{{ produit.text }}</p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </section>
+       {% endif %}
+      </main>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "::admin.html.twig" %}
+
+{% block title %}{{ parent() }} - Accueil {% endblock %}
+
+{% block contend %}
+<!-- Page Content-->
+<main class="page-content">
+
+  <section class="section section-inset-1">
+    <div class="container">          
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <section class="section section-inset-3">
+            <h4>Modifier l'actualité</h4><hr/>
+            <!-- RD Mailform-->
+            {{ form_start(form) }}
+             {{ form_errors(form) }}
+            <!--<form class="rd-mailform text-left" method="post" >-->
+            <div class="row row-10">
+                <div class="col-12 text-left">   
+                    <div class="form-wrap">
+                      <label class="checkbox-inline ">
+                          {{ form_widget(form.publier) }}<span>Publier</span>
+                      </label>
+                    </div>             
+                </div>
+                <div class="col-12">
+                    <div class="input-group">
+                        <label class="input-group-btn" required="required">
+                            <span class="btn btn-success btn-xs" >
+                               Image&hellip;{{ form_widget(form.file, {'attr': {'style': 'display: none','onchange':'handleFiles(files)'}}) }}
+                            </span>
+                        </label>
+                        <input type="text" class="form-input" readonly>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-sm-10 col-12">
+                    <div class="input-group">
+                         {{ form_label(form.alt, "ALT ...", {'label_attr': {'class': 'form-label'}}) }}
+                         {{ form_widget(form.alt, {'attr': {'class': 'form-input'}}) }}
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-2 col-12">
+                    <div class="input-group">
+                         {{ form_label(form.ordre, "Ordre ...", {'label_attr': {'class': 'form-label'}}) }}
+                         {{ form_widget(form.ordre, {'attr': {'class': 'form-input'}}) }}
+                    </div>
+                </div>
+                <div class="col-12 text-right">
+                  <button class="btn btn-success btn-sm" type="submit">Enregistrer</button>
+                </div>
+                <div class="col-12 text-center">
+                {% if errors is not empty %}
+                    <div class="alert alert-danger" role="alert">{{ errors }}2</div>
+                {% endif %}
+                {% if msg is not empty %}
+                    <div class="alert alert-success" role="alert">{{ msg }}1</div>
+                {% endif %}
+                </div>
+            </div>
+            <!--</form>-->
+            {{ form_end(form) }}
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-inset-1 bg-accent">
+  <div class="container">
+   <h2 class="text-center">Aperçu</h2>
+	<hr>
+	<!-- Owl Carousel-->
+	<div class="owl-carousel" data-items="1" data-loop="false" data-margin="30" data-dots="true">
+	  <div class="owl-item ">
+		<img id="apercu" src="{{ asset("uploads/img_actualite/" ~ uneActualite.image) }}" alt=""/>
+	  </div>
+	</div>
+  </div>
+  </section>
+</main>
+<script src="{{ asset('MDMeditec/public/js/file.js') }}"></script>
+{% endblock %}
+
+
+

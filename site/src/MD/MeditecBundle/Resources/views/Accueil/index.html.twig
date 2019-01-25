@@ -1,0 +1,118 @@
+{% extends "::meditec.html.twig" %}
+
+{% block title %}{{ parent() }} - Accueil {% endblock %}
+
+{% block contend %}
+   
+<!-- Page Content-->
+<main class="page-content">
+<section class="section">
+  <div class="container">
+	<h2>Qui sommes nous</h2>
+	<hr>
+        <p class="h5 fw-l text-md-left">Située à Aubagne, 15 minutes de Marseille et 20 minutes d’Aix en Provence, Meditec Dental est spécialisée dans l’informatique de votre cabinet dentaire.<p>
+        <p class="h5 fw-l text-md-left">   Depuis 2005 nous apportons aux chirurgiens dentistes notre expertise en imagerie dentaire, panoramique 2D et cone beam 3D, radiologie intra orale, informatique, sauvegarde et conseils pour vous aider dans votre pratique de tous les jours.</p>
+        <p class="h5 fw-l text-md-left">Meditec Dental est à votre écoute pour vous apporter un service sur mesure de qualité et assurer une relation de confiance</p>
+	<div class="row row-60 clearleft-custom offset-custom-2">
+	  <div class="col-12 col-md-6 col-xl-3">
+		<div class="thumbnail thumbnail-mod-1"><span class="icon icon-success icon-lg icon-mod-1 fa-desktop"></span>
+		  <div class="caption">
+			<h4>Vente</h4>
+			<p>Matériel informatique et imagerie pour les cabinets dentaires</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-12 col-md-6 col-xl-3">
+		<div class="thumbnail thumbnail-mod-1"><span class="icon icon-success icon-lg icon-mod-1 fa-cogs"></span>
+		  <div class="caption">
+			<h4>Dépannage</h4>
+			<p>Nous intervenons dans votre cabinet pour assurer des dépannages rapides de votre Informatique et imagerie</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-12 col-md-6 col-xl-3">
+		<div class="thumbnail thumbnail-mod-1"><span class="icon icon-success icon-lg icon-mod-1 fa-pencil-square-o"></span>
+		  <div class="caption">
+			<h4>Conseils</h4>
+			<p>Nous sommes présents à vos cotés pour tous les conseils techniques pour maximiser au mieux votre cabinet</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-12 col-md-6 col-xl-3">
+		<div class="thumbnail thumbnail-mod-1"><span class="icon icon-success icon-lg icon-mod-1 fa-comments-o"></span>
+		  <div class="caption">
+			<h4>Assistance</h4>
+			<p>Une question, un besoin spécifique sur un produit ou logiciel n’hésitez pas nous répondons à toutes vos attentes</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+{{ include("MDMeditecBundle:Accueil:news.html.twig") }}
+
+{{ include("MDMeditecBundle:Accueil:stat.html.twig") }}
+
+{{ include("MDMeditecBundle:Accueil:partners.html.twig") }}
+
+<section class="section section-inset-1 bg-light">
+  <div class="container">
+	<h2 class="text-center">Nous contacter</h2>
+	<hr>
+	<div class="col-12 col-md-6 col-xl-3">
+	   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.311377477356!2d5.599969615670623!3d43.28680048406354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9a3750bc5ae25%3A0xf7b86fb6997734ae!2sGROUPE+S2i!5e0!3m2!1sfr!2sfr!4v1535706536757" width="1100" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div><br>
+	<div class="row row-45 justify-content-xl-around text-md-left">
+	  <div class="col-12 col-md-6 col-xl-3">
+		<address>
+		  <div class="media flex-column flex-md-row">
+			<div class="media-left"><span class="icon icon-success icon-sm fa-map-marker"></span></div>
+			<div class="media-body">
+			  <p class="h6">Adresse</p><span>
+				 4A Centre de vie Agora ,<br>
+				 Zi les paluds, 13400 Aubagne.</span>
+			</div>
+		  </div>
+		</address>
+	  </div>
+	  <div class="col-12 col-md-6 col-xl-3">
+		<address>
+		  <div class="media flex-column flex-md-row">
+			<div class="media-left"><span class="icon icon-success icon-sm fa-phone"></span></div>
+			<div class="media-body">
+			  <p class="h6">Téléphone</p>
+			  <dl class="dl-horizontal">
+				<!--<dt>TEL:</dt>-->
+				<dd><a href="callto:#">04 42 84 34 50</a></dd>
+			  </dl>
+			  <!--<dl class="dl-horizontal">
+				<dt>FAX:</dt>
+				<dd><a href="callto:#">+1 800 889 9898</a></dd>
+			  </dl>-->
+			</div>
+		  </div>
+		</address>
+	  </div>
+	  <div class="col-12 col-md-6 col-xl-3">
+		<address>
+		  <div class="media flex-column flex-md-row">
+			<div class="media-left"><span class="icon icon-success icon-sm fa-envelope"></span></div>
+			<div class="media-body">
+			  <p class="h6">Email</p><a href="mailto:info@groupe-s2i.fr">info@groupe-s2i.fr</a>
+			</div>
+		  </div>
+		</address>
+	  </div>
+	</div>
+	
+  </div>
+</section>
+
+{{ include("MDMeditecBundle:Accueil:newsletter.html.twig") }}
+
+</main>
+{% endblock %}
+
+
+

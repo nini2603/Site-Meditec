@@ -1,0 +1,71 @@
+{% extends "::meditec.html.twig" %}
+
+{% block  title %}
+{{ parent() }} 
+- Contact {% endblock %}
+{% block selection %} {% endblock %}
+{% block contend %}
+   
+<!-- Page Content-->
+ <main class="page-content">
+        <section class="section bg-accent">
+          <div class="container">
+            <h3>Nous contacter</h3>
+            <hr>
+            <div class="container">
+              <div class="row row-45 text-md-left clearleft-custom">
+                <div class="col-12 col-md-6 col-xl-3">
+                  <address>
+                    <div class="media flex-column flex-md-row">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-map-marker"></span></div>
+                      <div class="media-body">
+                        <p class="h6">Adresse</p><span>
+                            4a centre de vie agora,<br/>
+                          ZI les paluds ,<br/> 13400 Aubagne.</span>
+                      </div>
+                    </div>
+                  </address>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                  <address>
+                    <div class="media flex-column flex-md-row">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-clock-o"></span></div>
+                      <div class="media-body">
+                          <p class="h6">Horaires</p><span>lundi au vendredi<br/>8h-12h 13h-18h</span>
+                      </div>
+                    </div>
+                  </address>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                  <address>
+                    <div class="media flex-column flex-md-row">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-phone"></span></div>
+                      <div class="media-body">
+                        <p class="h6">Phone</p>
+                        <dl class="dl-horizontal">
+                          <dt>Phone:</dt>
+                          <dd><a href="callto:#">04 42 84 34 50</a></dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </address>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                  <address>
+                    <div class="media flex-column flex-md-row">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-envelope"></span></div>
+                      <div class="media-body">
+                        <p class="h6">Email</p><a class="text-success-custom" href="mailto:info@groupe-s2i.fr">info@groupe-s2i.fr</a>
+                      </div>
+                    </div>
+                  </address>
+                </div>
+              </div>
+            </div><br/>
+              <div class="col-12">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d372055.876059812!2d5.470801!3d43.2370315!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9a3750bc5ae25%3A0xf7b86fb6997734ae!2sGROUPE+S2i!5e0!3m2!1sfr!2sfr!4v1546598650439" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+          </div>
+        </section>
+      </main>
+{% endblock %}

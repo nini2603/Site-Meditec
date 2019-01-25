@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: meditecd001.mysql.db
+    database_port: null
+    database_name: meditecd001
+    database_user: meditecd001
+    database_password: Groupe2603
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: sdfghjklkkjhgfdsqdfghjkl

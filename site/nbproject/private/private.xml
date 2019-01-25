@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/wamp64/www/Meditec/src/MD/MeditecBundle/Resources/views/Admin/liste_radiologie_produit.html.twig</file>
+            <file>file:/C:/wamp64/www/Meditec/src/MD/MeditecBundle/Entity/Informatique.php</file>
+            <file>file:/C:/wamp64/www/Meditec/src/MD/MeditecBundle/Controller/Radiologie_AController.php</file>
+            <file>file:/C:/wamp64/www/Meditec/app/Resources/views/admin.html.twig</file>
+            <file>file:/C:/wamp64/www/Meditec/src/MD/MeditecBundle/Controller/Actualite_AController.php</file>
+            <file>file:/C:/wamp64/www/Meditec/src/MD/MeditecBundle/Resources/config/routing.yml</file>
+        </group>
+    </open-files>
+</project-private>

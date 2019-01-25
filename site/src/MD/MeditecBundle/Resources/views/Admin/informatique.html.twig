@@ -1,0 +1,128 @@
+{% extends "::admin.html.twig" %}
+
+{% block title %}{{ parent() }} - page informatique {% endblock %}
+
+{% block contend %}
+<!-- Page Content-->
+<main class="page-content">
+
+<section class="section section-inset-1">  
+  <div class="container">
+    <h3 class="text-center">Informatique</h3>
+    <hr>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    <div class="col-12 text-center">
+        {% if errors is not empty %}
+            <div class="alert alert-danger" role="alert">{{ errors }}</div>
+        {% endif %}
+        {% if msg is not empty %}
+            <div class="alert alert-success" role="alert">{{ msg }}</div>
+        {% endif %}
+    </div>
+    <div class="row row-45 ">
+      <div class="col-6 col-md-6 c ol-lg-6 text-center text-lg-left">
+          {{ form_label(form.titre, "Titre de la page", {'label_attr': {'class': 'form-label'}}) }}
+          {{ form_widget(form.titre, {'attr': {'class': 'form-input'}}) }}
+        <br/>
+        <div class="input-group">
+            <label class="input-group-btn" required="required">
+                <span class="btn btn-success btn-xs" >
+                    Image&hellip;{{ form_widget(form.file, {'attr': {'style': 'display: none','onchange':'handleFiles(files)'}}) }}
+                </span>
+            </label>
+            <input type="text" class="form-input" readonly>
+        </div>
+        <br/>
+        <div class="input-group">
+             {{ form_label(form.alt, "ALT ...", {'label_attr': {'class': 'form-label'}}) }}
+             {{ form_widget(form.alt, {'attr': {'class': 'form-input'}}) }}
+        </div>
+        <br/>
+        <div class="input-group ">
+             {{ form_label(form.text, "Description ...", {'label_attr': {'class': 'form-label'}}) }}
+             {{ form_widget(form.text, {'attr': {'class': 'form-input'}}) }}
+        </div><br/>
+        <div class="text-right">
+         <button class="btn btn-success btn-sm" type="submit">Enregistrer</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-6 ">
+        <div class="row row-45 offset-custom-2">
+          <div class="col-12 col-md-6">
+               <div class="input-group">
+                {{ form_label(form.icone1, "Code icone", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.icone1, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.titre1, "Titre ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.titre1, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.text1, "text ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.text1, {'attr': {'class': 'form-input','style': 'max-height: 80px;'}}) }}
+                </div>
+          </div>   
+          <div class="col-12 col-md-6">
+                <div class="input-group">
+                {{ form_label(form.icone2, "Code icone", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.icone2, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.titre2, "Titre ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.titre2, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.text2, "text ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.text2, {'attr': {'class': 'form-input','style': 'max-height: 80px;'}}) }}
+                </div>
+          </div>
+          <div class="col-12 col-md-6">
+                <div class="input-group">
+                {{ form_label(form.icone3, "Code icone", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.icone3, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.titre3, "Titre ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.titre3, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.text3, "text ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.text3, {'attr': {'class': 'form-input','style': 'max-height: 80px;'}}) }}
+                </div>
+          </div>
+          <div class="col-12 col-md-6">
+           <div class="input-group">
+                {{ form_label(form.icone4, "Code icone", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.icone4, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.titre4, "Titre ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.titre4, {'attr': {'class': 'form-input'}}) }}
+                </div>
+                <br/>
+                <div class="input-group">
+                {{ form_label(form.text4, "text ...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.text4, {'attr': {'class': 'form-input','style': 'max-height: 80px;'}}) }}
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ form_end(form) }}
+  </div>
+</section>  
+</main>
+<script src="{{ asset('MDMeditec/public/js/file.js') }}"></script>
+
+{% endblock %}
+
+
+

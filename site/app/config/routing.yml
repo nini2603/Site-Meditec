@@ -1,0 +1,14 @@
+md_meditec:
+    resource: "@MDMeditecBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+login:
+    path: /login
+    defaults:
+        _controller: MDMeditecBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

@@ -1,0 +1,49 @@
+{% extends "::admin.html.twig" %}
+
+{% block title %}{{ parent() }} - Accueil {% endblock %}
+
+{% block contend %}
+<!-- Page Content-->
+<main class="page-content">
+  <section class="section section-inset-1">
+    <div class="container">          
+        <div class="row row-45 justify-content-end">
+            <div class="col-12 section-inset-1">
+                  <h4>Les chiffres</h4><hr/>
+              <div class="table-responsive">
+                <table class="table table-hover text-left" table style="width:100%">
+                  <thead>
+                    <tr class="bg-accent">
+                      <th>Intitulé</th>
+                      <th class="text-center">Odre</th>
+                      <th class="text-center">Chiffre</th>
+                      <th class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for chiffre in listeChiffre %}
+                    <tr>
+                        <td style="width:60%"><a href="">{{ chiffre.intitule }}</a></td>
+                        <td class="text-center">{{ chiffre.ordre }}</td>
+                        <td class="text-center">{{ chiffre.chiffre }}</td>
+                        <td class="text-center">
+                           <a href="{{ path('MD_Admin_Modifier_Chiffre',{'id':chiffre.id}) }}"><i class="fa fa-gear"></i></a>
+                           <a href="{{ path('MD_Admin_Supprimer_Chiffre',{'id':chiffre.id})}}"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+                {% if message is not empty %}
+                    <div class="alert alert-success" role="alert">{{ message }}</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+
+

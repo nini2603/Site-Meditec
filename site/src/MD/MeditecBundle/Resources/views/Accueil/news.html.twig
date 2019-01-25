@@ -1,0 +1,14 @@
+<section class="section section-inset-1 bg-accent">
+  <div class="container">
+   <h2 class="text-center">Actualités</h2>
+	<hr>
+	<!-- Owl Carousel-->
+	<div class="owl-carousel" data-items="1" data-loop="false" data-margin="30" data-dots="true">
+         {% for actualite in lstActualite %}
+	  <div class="owl-item ">
+		<img src="{{ asset('uploads/img_actualite/'~ actualite.image) }}" alt="{{ actualite.alt }}">
+	  </div>
+         {% endfor %}
+	</div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="section section-inset-2">
+  <div class="container">
+	<h2 class="text-center">Partenaires</h2>
+	<hr>
+	<div class="row">
+	  <!-- Owl Carousel-->
+	  <div class="owl-carousel owl-carousel-mod-1" data-items="1" data-md-items="1" data-xl-items="6" data-loop="true" data-margin="50" data-dots="true" data-autoplay="true" data-dots-each="1" data-xs-stage-padding="15">
+                {% for partenaire in lstPartenaire %}
+                    <div class="owl-item ">
+                          <img src="{{ asset('uploads/img_partenaire/'~ partenaire.image) }}" alt="{{ partenaire.alt }}">
+                    </div>
+                {% endfor %}
+	  </div>
+	</div>
+  </div>
+</section>

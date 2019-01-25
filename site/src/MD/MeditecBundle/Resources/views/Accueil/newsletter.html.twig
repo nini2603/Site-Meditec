@@ -1,0 +1,25 @@
+<section class="bg-light bg-subscribe section section-inset-1">
+  <div class="container">
+	<h2 class="text-center">newsletter</h2>
+	<hr>
+	<div class="row justify-content-center offset-custom-3">
+	  <div class="col-12 col-lg-9 col-xl-6 col-lg-offset-2 col-xl offset-custom-3">
+		<!-- RD Mailform-->
+                
+            {{ form_start(formNewsletter, {'attr': {'method':'POST','class':'subscribe-form','action':'#newsletter'}}) }}
+            
+                <div class="form-wrap">
+
+                {{ form_label(formNewsletter.mail, "Votre e-mail...", {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(formNewsletter.mail, {'attr': {'class': 'form-input'}}) }}
+                <p class="fw-l h5 text-transform-none text-center">{{ form_errors(formNewsletter.mail) }}</p>
+                </div>
+                <div class="button-wrap">
+                    <button class="btn btn-sm btn-success" type="submit">Subscribe</button>
+                </div>
+            {{ form_end(formNewsletter) }}
+
+	  </div>
+	</div>
+  </div>
+</section>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Site Title-->
+	
+    <title>An Error Occurred: {{ status_text }}</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="{{ _charset }}" />
+    <link rel="icon" href="{{ asset('MDMeditec/public/images/favicon.ico') }}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,300%7CRoboto+Slab:400,700%7CMontserrat:700%7CPacifico">
+    <link rel="stylesheet" href="{{ asset('MDMeditec/public/css/fonts.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('MDMeditec/public/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('MDMeditec/public/css/style.css') }}" type="text/css" />
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="{{ asset('MDMeditec/public/js/html5shiv.min.js') }}"></script>
+	<![endif]-->
+  </head>
+
+   <body>
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="page-head">
+        <!-- Message et erreur page -->
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap header-minimal">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-stick-up-offset="100px">
+            <!--(data-layout='rd-navbar-fixed',data-sm-layout='rd-navbar-fullwidth', data-lg-layout=rd_navbar_data_ajuster )-->
+            <div class="rd-navbar-top-panel bg-accent">
+              <div class="rd-navbar-inner">
+                <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".list-inline" type="submit"><span></span></button><a class="fa-envelope" href="mailto:#">info@demolink.org</a><a class="fa-mobile-phone preffix-2" href="callto:#">1-800-1234-567</a>
+                <ul class="list-inline pull-right">
+                  <li><a class="fa-facebook" href="#"></a></li>
+                  <li><a class="fa-twitter" href="#"></a></li>
+                  <li><a class="fa-pinterest-p" href="#"></a></li>
+                  <li><a class="fa-vimeo" href="#"></a></li>
+                  <li><a class="fa-google-plus" href="#"></a></li>
+                  <li><a class="fa-rss" href="#"></a></li>
+                  <li class="text-left"><a class="fa-envelope" href="mailto:#">info@demolink.org</a></li>
+                  <li class="text-left"><a class="fa-mobile-phone" href="callto:#">1-800-1234-567</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" type="submit"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="./"><img src="{{ asset('MDMeditec/public/images/meditec-dental-gris.png') }}" alt="Meditec dental"/></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- RD Navbar Search
+                <div class="rd-navbar-search">
+                  <form class="rd-search rd-navbar-search-form" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                    <label class="rd-navbar-search-form-input">
+                      <input type="text" name="s" placeholder="Search.." autocomplete="off">
+                    </label>
+                    <button class="rd-navbar-search-form-submit fa-shopping-cart" type="submit"></button>
+                  </form>
+                  <div class="rd-search-results-live rd-navbar-live-search-results" id="rd-search-results-live"></div>
+                  <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search, .rd-navbar-live-search-results" type="submit"></button>
+                </div>-->
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="./">Accueil</a></li>
+                  <li><a href="#">Informatique</a>
+                    <!-- RD Navbar Dropdown-->
+         
+                  </li>
+                  <li><a href="#">Radiologie</a>
+                    <!-- RD Navbar Dropdown-->
+       
+                  </li>
+                  <li><a href="#">Sauvegarde</a>
+                    <!-- RD Navbar Dropdown-->
+                  </li>
+                  <li><a href="#">Nos développements</a></li>
+			<li><a href="#">Financement</a>
+                    <!-- RD Navbar Dropdown-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+	  
+	<section>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-10 col-md-offset-1">
+                <div class="jumbotron jumbotron-1 text-center">
+                  <h1><small>404</small><span class='font-weight-bold'>Page non trouvée</span>
+                  </h1>
+                  <p>
+                  </p>
+                  <p class="h5 fw-l">La page demandée n’a pu être trouvée - cela pourrait être dû à une erreur d’orthographe dans l’URL ou à une page supprimée.</p><a class="btn btn-sm btn-success" href="./">Retourner à la page d'accueil</a>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </section>
+	  
+      <!-- Page Footer-->
+      <footer class="page-foot bg-light">
+        <section class="footer-content">
+          <div class="container">
+            <div class="rd-navbar-brand">
+                <a class="brand-name" href="index.html">
+		<img src="{{ asset('MDMeditec/public/images/meditec-dental-gris.png') }}" alt="Meditec dental"/>
+                </a>
+            </div>
+            <ul class="list-inline">
+              <li><a class="fa-facebook" href="#"></a></li>
+              <li><a class="fa-twitter" href="#"></a></li>
+             <!-- <li><a class="fa-pinterest-p" href="#"></a></li>-->
+              <!--<li><a class="fa-vimeo" href="#"></a></li>-->
+              <li><a class="fa-google" href="#"></a></li>
+              <!--<li><a class="fa-rss" href="#"></a></li>-->
+            </ul>
+          </div>
+        </section>
+        <section class="footer-copyright-1 copyright">
+          <div class="container">
+            <p>&#169; <span class="copyright-year"></span> All Rights Reserved <a href="terms.html">Terms of Use and Privacy Policy</a></p>
+          </div>
+        </section>
+      </footer>
+
+      <!-- Rd Mailform result field-->
+      <div class="rd-mailform-validate"></div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+	<script src="{{ asset('MDMeditec/public/js/core.min.js') }}"></script>
+    <script src="{{ asset('MDMeditec/public/js/script.js') }}"></script> 
+</html>

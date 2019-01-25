@@ -1,0 +1,52 @@
+{% extends "::admin.html.twig" %}
+
+{% block title %}{{ parent() }} - liste des produits radiologiques {% endblock %}
+
+{% block contend %}
+<!-- Page Content-->
+<main class="page-content">
+  <section class="section section-inset-1">
+    <div class="container">          
+        <div class="row row-45 justify-content-end">
+            <div class="col-12 section-inset-1">
+                <h4>Liste produit </h4><hr/>
+              <div><a class="btn btn-info btn-sm btn-icon" href="{{ path('MD_Admin_Radiologie_Produit') }}"><span class="icon fa-plus"></span> Ajouter</a></div><br/>
+
+              <div class="table-responsive">
+                <table class="table table-hover text-left" table style="width:100%">
+                  <thead>
+                    <tr class="bg-accent">
+                      <th class="text-center">Titre</th>
+                      <th class="text-center">Description</th>
+                      <th class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for produit in listeProduit %}
+                    <tr>
+                        <td style="width:30%"><a href="">{{ produit.titre }}</a></td>
+                        <td style="width:40%" class="text-center">{{ produit.text }}</td>
+                        <td class="text-center">
+                           <a href="{{ path('MD_Admin_Radiologie_Modifier_Produit',{'id':produit.id}) }}"><i class="fa fa-gear"></i></a>
+                           <a href="{{ path('MD_Admin_Radiologie_Supprimer_Produit',{'id':produit.id})}}"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+                {% if msg is not empty %}
+                    <div class="alert alert-success" role="alert">{{ msg }}</div>
+                {% endif %}
+                  {% if errors is not empty %}
+                    <div class="alert alert-danger" role="alert">{{ errors }}</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+
+

@@ -1,0 +1,38 @@
+{% extends "::meditec.html.twig" %}
+{% block selection %} {% endblock %}
+{% block contend %}
+<!-- Page Content-->
+<main class="page-content">
+<section class="section section-inset-1">
+    <div class="container">
+      <h2>Connexion</h2>
+      <hr>
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-8">
+          <div class="row justify-content-center offset-custom-5">
+            <div class="col-xl-6 col-xl offset-custom-3">
+              <form action="{{ path('login_check') }}" method="POST" >
+                <div class="form-wrap">
+                   <label class="form-label" for="username">Identifiant</label>
+                   <input class="form-input" id="username" type="text" name="_username" data-constraints="@Required">
+                </div><br />
+                <div class="form-wrap">
+                  <label class="form-label" for="password">Mot de passe...</label>
+                  <input class="form-input" id="password" type="password" name="_password" data-constraints="@Required">
+                </div>
+                <br/>
+                <div class="button-wrap text-center">
+                  <button class="btn btn-success btn-sm btn-min-width-lg" type="submit">Connexion</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</main>
+{% endblock %}
+
+
+

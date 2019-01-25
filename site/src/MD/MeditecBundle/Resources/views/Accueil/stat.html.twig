@@ -1,0 +1,14 @@
+<section class="section section-inset-1 bg-light">
+  <div class="container">
+	<h2 class="text-center">Quelques chiffres</h2>
+	<hr>
+	<div class="row row-45">
+	{% for chiffre in listeChiffre %}
+            <div class="col-12 col-md-6 col-lg-3">
+             <div class="counter">{{chiffre.chiffre}}</div>
+             <p class="h5 fw-l text-transform-none letter-spacing">{{ chiffre.intitule }}</p>
+            </div>
+        {% endfor %}
+	</div>
+  </div>
+</section>

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+  <head>
+    <!-- Site Title-->
+	
+    <title>{% block title %}Meditec dental {% endblock %}</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{{ asset('MDMeditec/public/images/favicon.ico') }}" type="image/x-icon">
+    {% block meta %}
+        
+    {% endblock %}
+    <!-- Stylesheets-->
+	{% block style %}
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,300%7CRoboto+Slab:400,700%7CMontserrat:700%7CPacifico">
+	<link rel="stylesheet" href="{{ asset('MDMeditec/public/css/fonts.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('MDMeditec/public/css/bootstrap.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('MDMeditec/public/css/style.css') }}" type="text/css" />
+	<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="{{ asset('MDMeditec/public/js/html5shiv.min.js') }}"></script>
+	<![endif]-->
+	{% endblock %}
+  </head>
+  <body>
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="page-head">
+        <!-- Message et erreur page -->
+        <div class=" text-center">
+            {% if errors is not empty %}
+                <div class="alert alert-danger" role="alert">{{ errors }}</div>
+            {% endif %}
+            {% if msg is not empty %}
+                <div class="alert alert-success" role="alert">{{ msg }}</div>
+            {% endif %}
+        </div>
+	{% block menu %}
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap header-minimal">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-stick-up-offset="100px">
+            <!--(data-layout='rd-navbar-fixed',data-sm-layout='rd-navbar-fullwidth', data-lg-layout=rd_navbar_data_ajuster )-->
+            <div class="rd-navbar-top-panel bg-accent">
+              <div class="rd-navbar-inner">
+                <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".list-inline" type="submit"><span></span></button><a class="fa-envelope" href="mailto:info@groupe-s2i.fr">info@groupe-s2i.fr</a><a class="fa-mobile-phone preffix-2" href="callto:0442843450">04-42-84-34-50</a>
+                <ul class="list-inline pull-right">
+                  <li><a class="fa-facebook" href="#"></a></li>
+                  <li><a class="fa-twitter" href="#"></a></li>
+                  <li><a class="fa-pinterest-p" href="#"></a></li>
+                  <li><a class="fa-vimeo" href="#"></a></li>
+                  <li><a class="fa-google-plus" href="#"></a></li>
+                  <li><a class="fa-rss" href="#"></a></li>
+                  <li class="text-left"><a class="fa-envelope" href="mailto:info@groupe-s2i.fr">info@groupe-s2i.fr</a></li>
+                  <li class="text-left"><a class="fa-mobile-phone" href="callto:0442843450">04-42-84-34-50</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap" type="submit"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="./"><img src="{{ asset('MDMeditec/public/images/meditec-dental-gris.png') }}" alt="Meditec dental"/></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- RD Navbar Search
+                <div class="rd-navbar-search">
+                  <form class="rd-search rd-navbar-search-form" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                    <label class="rd-navbar-search-form-input">
+                      <input type="text" name="s" placeholder="Search.." autocomplete="off">
+                    </label>
+                    <button class="rd-navbar-search-form-submit fa-shopping-cart" type="submit"></button>
+                  </form>
+                  <div class="rd-search-results-live rd-navbar-live-search-results" id="rd-search-results-live"></div>
+                  <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search, .rd-navbar-live-search-results" type="submit"></button>
+                </div>-->
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="./">Accueil</a></li>
+                  <li><a href="{{ path('MD_Informatique') }}">Informatique</a>
+                    <!-- RD Navbar Dropdown-->
+         
+                  </li>
+                  <li><a href="{{ path('MD_Radiologie') }}">Radiologie</a>
+                    <!-- RD Navbar Dropdown-->
+       
+                  </li>
+                  <li><a href="{{ path('MD_Sauvegarde') }}">Sauvegarde</a>
+                    <!-- RD Navbar Dropdown-->
+                  </li>
+                  <li><a href="#">Nos développements</a></li>
+			<li><a href="{{ path('MD_Contact') }}">Contact</a>
+                    <!-- RD Navbar Dropdown-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+		{% endblock %}
+	{% block selection %}
+        <section>
+          <div class="swiper-container swiper-slider">
+            <div class="jumbotron-mod-1 text-center">
+              <div>
+                <h1><small>Informatique dentaire</small><span class='font-weight-bold'>Meditec Dental</span></h1>
+                <p>Informatique, Radiologie, Sauvegarde et conseils</p>
+              </div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-slide-bg="{{ asset('MDMeditec/public/images/slider-1.jpg') }}">
+                <div class="swiper-slide-caption"></div>
+              </div>
+              <div class="swiper-slide" data-slide-bg="{{ asset('MDMeditec/public/images/slider-2.jpg') }}">
+                <div class="swiper-slide-caption"></div>
+              </div>
+              <div class="swiper-slide" data-slide-bg="{{ asset('MDMeditec/public/images/slider-3.jpg') }}">
+                <div class="swiper-slide-caption"></div>
+              </div>
+            </div>
+            <!-- Swiper Pagination-->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+	{% endblock %}
+      </header>
+	  
+	  {% block contend %}{% endblock %}
+	  
+	  {% block footer %}
+      <!-- Page Footer-->
+      <footer class="page-foot bg-light">
+        <section class="footer-content">
+          <div class="container">
+            <div class="rd-navbar-brand">
+                <a class="brand-name" href="index.html">
+		<img src="{{ asset('MDMeditec/public/images/meditec-dental-gris.png') }}" alt="Meditec dental"/>
+                </a>
+            </div>
+            <ul class="list-inline">
+              <li><a class="fa-facebook" href="#"></a></li>
+              <li><a class="fa-twitter" href="#"></a></li>
+             <!-- <li><a class="fa-pinterest-p" href="#"></a></li>-->
+              <!--<li><a class="fa-vimeo" href="#"></a></li>-->
+              <li><a class="fa-google" href="#"></a></li>
+              <!--<li><a class="fa-rss" href="#"></a></li>-->
+            </ul>
+          </div>
+        </section>
+        <section class="footer-copyright-1 copyright">
+          <div class="container">
+            <p>&#169; <span class="copyright-year"></span> All Rights Reserved <a href="terms.html">Terms of Use and Privacy Policy</a></p>
+          </div>
+        </section>
+      </footer>
+	  {% endblock %}
+      <!-- Rd Mailform result field-->
+      <div class="rd-mailform-validate"></div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+	<script src="{{ asset('MDMeditec/public/js/core.min.js') }}"></script>
+    <script src="{{ asset('MDMeditec/public/js/script.js') }}"></script> 
+	
+  </body>
+</html>

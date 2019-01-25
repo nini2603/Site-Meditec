@@ -1,0 +1,117 @@
+MD_Accueil:
+    path: /
+    defaults: { _controller: MDMeditecBundle:Accueil:index }
+MD_Contact:
+    path: /contact
+    defaults: { _controller: MDMeditecBundle:Contact:index }
+MD_Informatique:
+    path: /informatique
+    defaults: { _controller: MDMeditecBundle:Informatique:index }
+MD_Radiologie:
+    path: /radiologie
+    defaults: { _controller: MDMeditecBundle:Radiologie:index }
+MD_Sauvegarde:
+    path: /sauvegarde
+    defaults: { _controller: MDMeditecBundle:Sauvegarde:index }
+
+#routing espace administration
+MD_Admin:
+    path: /mon_espace_meditec/accueil
+    defaults: { _controller: MDMeditecBundle:Admin:index }
+#Routing admin actualité
+MD_Admin_Ajouter_Actualite:
+    path: /mon_espace_meditec/ajouter_actualite
+    defaults: { _controller: MDMeditecBundle:Actualite_A:ajouter }
+MD_Admin_Liste_Actualite:
+    path: /mon_espace_meditec/actualite
+    defaults: { _controller: MDMeditecBundle:Actualite_A:liste }
+MD_Admin_Supprimer_Actualite:
+    path: /mon_espace_meditec/supprimer_actualite/{id}
+    defaults: { _controller: MDMeditecBundle:Actualite_A:supprimer }
+MD_Admin_Modifier_Actualite:
+    path: /mon_espace_meditec/modifier_actualité/{id}
+    defaults: { _controller: MDMeditecBundle:Actualite_A:modifier }
+    
+#routing amdin chiffre
+MD_Admin_Ajouter_Chiffre:
+    path: /mon_espace_meditec/ajouter_chiffre
+    defaults: { _controller: MDMeditecBundle:Chiffre_A:ajouter }
+MD_Admin_Liste_Chiffre:
+    path: /mon_espace_meditec/gerer_chiffre
+    defaults: { _controller: MDMeditecBundle:Chiffre_A:liste }
+MD_Admin_Supprimer_Chiffre:
+    path: /mon_espace_meditec/supprimer_chiffre/{id}
+    defaults: { _controller: MDMeditecBundle:Chiffre_A:supprimer }
+MD_Admin_Modifier_Chiffre:
+    path: /mon_espace_meditec/modifier_chiffre/{id}
+    defaults: { _controller: MDMeditecBundle:Chiffre_A:modifier }
+
+#Routing admin partenaire
+MD_Admin_Ajouter_Partenaire:
+    path: /mon_espace_meditec/ajouter_partenaire
+    defaults: { _controller: MDMeditecBundle:Partenaire_A:ajouter }
+MD_Admin_Liste_Partenaire:
+    path: /mon_espace_meditec/partenaire
+    defaults: { _controller: MDMeditecBundle:Partenaire_A:liste }
+MD_Admin_Supprimer_Partenaire:
+    path: /mon_espace_meditec/supprimer_partenaire/{id}
+    defaults: { _controller: MDMeditecBundle:Partenaire_A:supprimer }
+MD_Admin_Modifier_Partenaire:
+    path: /mon_espace_meditec/modifier_partenaire/{id}
+    defaults: { _controller: MDMeditecBundle:Partenaire_A:modifier } 
+    
+#Routing admin newsletters
+MD_Admin_Liste_Newsletter:
+    path: /mon_espace_meditec/liste_email
+    defaults: { _controller: MDMeditecBundle:Newsletter_A:liste }
+MD_Admin_CSV:
+    path: /mon_espace_meditec/csv
+    defaults: { _controller: MDMeditecBundle:Newsletter_A:csv }
+    
+#Routing admin page infomatique
+MD_Admin_Page_Informatique:
+    path: /mon_espace_meditec/page_informatique
+    defaults: { _controller: MDMeditecBundle:Informatique_A:index }
+    
+#Routing admin page radiologie
+MD_Admin_Page_Radiologie:
+    path: /mon_espace_meditec/page_radiologie
+    defaults: { _controller: MDMeditecBundle:Radiologie_A:index }
+    
+#Routing admin page radiologie produits
+MD_Admin_Radiologie_Produit:
+    path: /mon_espace_meditec/page_radiologie_ajouter_produit
+    defaults: { _controller: MDMeditecBundle:Radiologie_A:produit_ajouter }
+MD_Admin_Radiologie_Liste_Produit:
+    path: /mon_espace_meditec/page_radiologie_liste_produit
+    defaults: { _controller: MDMeditecBundle:Radiologie_A:liste_Produit }
+MD_Admin_Radiologie_Supprimer_Produit:
+    path: /mon_espace_meditec/page_radiologie_supprimer/{id}
+    defaults: { _controller: MDMeditecBundle:Radiologie_A:supprimer_produit}
+MD_Admin_Radiologie_Modifier_Produit:
+    path: /mon_espace_meditec/page_radiologie_modifier_produit/{id}
+    defaults: { _controller: MDMeditecBundle:Radiologie_A:modifier_Produit }
+
+#Routing admin page Application
+MD_Admin_Page_Application:
+    path: /mon_espace_meditec/page_Application
+    defaults: { _controller: MDMeditecBundle:Application_A:index }
+
+#Routing admin page application produits
+MD_Admin_Application_Produit:
+    path: /mon_espace_meditec/page_application_ajouter_produit
+    defaults: { _controller: MDMeditecBundle:Application_A:produit_ajouter }
+MD_Admin_Application_Liste_Produit:
+    path: /mon_espace_meditec/page_application_liste_produit
+    defaults: { _controller: MDMeditecBundle:Application_A:liste_Produit }
+MD_Admin_Application_Supprimer_Produit:
+    path: /mon_espace_meditec/page_application_supprimer/{id}
+    defaults: { _controller: MDMeditecBundle:Application_A:supprimer_produit}
+MD_Admin_Application_Modifier_Produit:
+    path: /mon_espace_meditec/page_application_modifier_produit/{id}
+    defaults: { _controller: MDMeditecBundle:Application_A:modifier_Produit }    
+    
+#Routing admin page infomatique
+MD_Admin_Page_Sauvegarde:
+    path: /mon_espace_meditec/page_sauvegarde
+    defaults: { _controller: MDMeditecBundle:Sauvegarde_A:index }

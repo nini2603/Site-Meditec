@@ -1,0 +1,69 @@
+{% extends "::meditec.html.twig" %}
+
+{% block  title %}
+{{ parent() }} 
+- Contact {% endblock %}
+{% block selection %} {% endblock %}
+{% block contend %}
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Content-->
+      <main class="page-content">
+        <section class="section section-inset-1">
+          <div class="container">
+            <h2 class="text-center">{{ pageInfo.titre }}</h2>
+            <hr>
+            <div class="row row-45">
+              <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left"><img src="{{ asset('uploads/img_informatique/'~ pageInfo.image) }}" alt="{{ pageInfo.alt }}"></div>
+              <div class="col-12 col-md-12 col-lg-6 text-md-left well2">
+                <p>{{ pageInfo.text }}</p>
+                <div class="row row-45 offset-custom-2">
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageInfo.icone1 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageInfo.titre1 }}</a></h6>
+                        <p> {{ pageInfo.text1}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageInfo.icone2 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageInfo.titre2 }}</a></h6>
+                        <p>{{ pageInfo.text2 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageInfo.icone3 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageInfo.titre3 }}</a></h6>
+                        <p>pageInfo.text3</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageInfo.icone4 }}"></span></div>
+                      <div class="media-body">
+                        <h6 class="text-transform-none"><a href="#">{{ pageInfo.titre4 }}</a></h6>
+                        <p>{{ pageInfo.text4 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+{% endblock %}
