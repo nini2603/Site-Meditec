@@ -24,7 +24,7 @@ class Sauvegarde_AController extends Controller
         if($tabResult <> NULL){
             return $this->render('MDMeditecBundle:Admin:sauvegarde.html.twig', $tabResult);
         }else{
-            return $this->redirectToRoute('MD_Accueil');
+            return $this->redirectToRoute('MD_Sauvegarde');
         }
     }
     

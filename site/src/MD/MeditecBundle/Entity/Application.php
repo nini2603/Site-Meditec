@@ -13,6 +13,13 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class Application
 {
+    public function __construct() {
+        $this->chemin1 = "#";
+        $this->chemin2 = "#";
+        $this->chemin3 = "#";
+        $this->chemin4 = "#";
+    }
+
     /**
      * @var int
      *
