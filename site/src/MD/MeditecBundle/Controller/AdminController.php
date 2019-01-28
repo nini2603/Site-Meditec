@@ -23,4 +23,11 @@ class AdminController extends Controller
             'errors' => $errors,
         ));
     }
+    public function iconeAction()
+    {
+        return $this->render( 'MDMeditecBundle:Autres:icons.html.twig', array(
+            'msg' => '',
+            'errors' => '',
+        ));
+    }
 }

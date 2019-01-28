@@ -13,6 +13,9 @@ MD_Radiologie:
 MD_Sauvegarde:
     path: /sauvegarde
     defaults: { _controller: MDMeditecBundle:Sauvegarde:index }
+MD_Application:
+    path: /application
+    defaults: { _controller: MDMeditecBundle:Application:index }
 
 #routing espace administration
 MD_Admin:
@@ -115,3 +118,8 @@ MD_Admin_Application_Modifier_Produit:
 MD_Admin_Page_Sauvegarde:
     path: /mon_espace_meditec/page_sauvegarde
     defaults: { _controller: MDMeditecBundle:Sauvegarde_A:index }
+
+#Routing admin icons
+MD_Admin_Icone:
+  path: /mon_espace_meditec/icones
+  defaults: { _controller: MDMeditecBundle:Admin:icone }

@@ -1,8 +1,7 @@
 {% extends "::meditec.html.twig" %}
 
 {% block  title %}
-{{ parent() }} 
-- Application {% endblock %}
+{{ parent() }} - Application {% endblock %}
 {% block selection %} {% endblock %}
 {% block contend %}
     <!-- Page-->
@@ -11,46 +10,46 @@
       <main class="page-content">
         <section class="section section-inset-1">
           <div class="container">
-            <h2 class="text-center">{{ pageRadio.titre }}</h2>
+            <h2 class="text-center">{{ pageAppli.titre }}</h2>
             <hr>
             <div class="row row-45">
-              <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left"><img src="{{ asset('uploads/img_radiologie/'~ pageRadio.image) }}" alt="{{ pageRadio.alt }}"></div>
+              <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left"><img src="{{ asset('uploads/img_application/'~ pageAppli.image) }}" alt="{{ pageAppli.alt }}"></div>
               <div class="col-12 col-md-12 col-lg-6 text-md-left well2">
-                <p>{{ pageRadio.text }}</p>
+                <p>{{ pageAppli.text }}</p>
                 <div class="row row-45 offset-custom-2">
                   <div class="col-12 col-md-6">
                     <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
-                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone1 }}"></span></div>
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageAppli.icone1 }}"></span></div>
                       <div class="media-body">
-                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre1 }}</a></h6>
-                        <p> {{ pageRadio.text1}}</p>
+                        <h6 class="text-transform-none"><a href="#">{{ pageAppli.titre1 }}</a></h6>
+                        <p> {{ pageAppli.text1}}</p>
                       </div>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
-                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone2 }}"></span></div>
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageAppli.icone2 }}"></span></div>
                       <div class="media-body">
-                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre2 }}</a></h6>
-                        <p>{{ pageRadio.text2 }}</p>
+                        <h6 class="text-transform-none"><a href="#">{{ pageAppli.titre2 }}</a></h6>
+                        <p>{{ pageAppli.text2 }}</p>
                       </div>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
-                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone3 }}"></span></div>
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageAppli.icone3 }}"></span></div>
                       <div class="media-body">
-                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre3 }}</a></h6>
-                        <p>pageRadio.text3</p>
+                        <h6 class="text-transform-none"><a href="#">{{ pageAppli.titre3 }}</a></h6>
+                        <p>pageAppli.text3</p>
                       </div>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="media flex-column flex-md-row thumbnail-mod-1 media-mod-1">
-                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageRadio.icone4 }}"></span></div>
+                      <div class="media-left"><span class="icon icon-success icon-sm fa-{{ pageAppli.icone4 }}"></span></div>
                       <div class="media-body">
-                        <h6 class="text-transform-none"><a href="#">{{ pageRadio.titre4 }}</a></h6>
-                        <p>{{ pageRadio.text4 }}</p>
+                        <h6 class="text-transform-none"><a href="#">{{ pageAppli.titre4 }}</a></h6>
+                        <p>{{ pageAppli.text4 }}</p>
                       </div>
                     </div>
                   </div>
@@ -67,7 +66,7 @@
             <div class="row clearleft-custom-1 row-55">
             {% for  produit in listeProduits %}
               <div class="col-12 col-md-6 col-xl-4">
-                <div class="thumbnail thumbnail-mod-2"><img src="{{ asset('uploads/img_radiologie_produit/'~ produit.image) }}" alt="{{ produit.alt }}">
+                <div class="thumbnail thumbnail-mod-2"><img src="{{ asset('uploads/img_application_produit/'~ produit.image) }}" alt="{{ produit.alt }}">
                   <div class="caption-mod-1">
                     <h4 class="text-success-custom"> {{ produit.titre }}</h4>
                     <p>{{ produit.text }}</p>

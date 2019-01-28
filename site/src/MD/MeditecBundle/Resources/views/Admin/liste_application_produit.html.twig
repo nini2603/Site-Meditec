@@ -10,7 +10,7 @@
         <div class="row row-45 justify-content-end">
             <div class="col-12 section-inset-1">
                 <h4>Liste produit </h4><hr/>
-              <div><a class="btn btn-info btn-sm btn-icon" href="{{ path('MD_Admin_Radiologie_Produit') }}"><span class="icon fa-plus"></span> Ajouter</a></div><br/>
+              <div><a class="btn btn-info btn-sm btn-icon" href="{{ path('MD_Admin_Application_Produit') }}"><span class="icon fa-plus"></span> Ajouter</a></div><br/>
 
               <div class="table-responsive">
                 <table class="table table-hover text-left" table style="width:100%">
@@ -27,8 +27,8 @@
                         <td style="width:30%"><a href="">{{ produit.titre }}</a></td>
                         <td style="width:40%" class="text-center">{{ produit.text }}</td>
                         <td class="text-center">
-                           <a href="{{ path('MD_Admin_Radiologie_Modifier_Produit',{'id':produit.id}) }}"><i class="fa fa-gear"></i></a>
-                           <a href="{{ path('MD_Admin_Radiologie_Supprimer_Produit',{'id':produit.id})}}"><i class="fa fa-trash-o"></i></a>
+                           <a href="{{ path('MD_Admin_Application_Modifier_Produit',{'id':produit.id}) }}"><i class="fa fa-gear"></i></a>
+                           <a href="{{ path('MD_Admin_Application_Supprimer_Produit',{'id':produit.id})}}"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
                     {% endfor %}
