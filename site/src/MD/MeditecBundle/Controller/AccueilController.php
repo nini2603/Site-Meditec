@@ -97,6 +97,9 @@ class AccueilController extends Controller
      * fonction affichage du menu en selon les la visibilité des page
      */
     public function menuVisible(){
+        $visibleInfo = false;$visibleAppli = false;$visibleSvg = false;$visibleRadio = false;
+
+
         //Requete info visibilité
         $em = $this->getDoctrine()->getManager();
         $unInfo = $em->getRepository('MDMeditecBundle:Informatique')->findOnlyOne();
@@ -110,11 +113,15 @@ class AccueilController extends Controller
         //Requete Radiologie
         $uneRadio = $em->getRepository('MDMeditecBundle:Radiologie')->findOnlyOne();
 
+        if($unInfo){ $visibleInfo = $unInfo[0]->getVisible(); }
+        if($uneAppli){ $visibleAppli = $uneAppli[0]->getVisible(); }
+        if($uneSvg){ $visibleSvg = $uneSvg[0]->getVisible(); }
+        if($uneRadio){ $visibleRadio = $uneRadio[0]->getVisible(); }
 
-        $this->get('session')->set('visibleIfo',$unInfo[0]->getVisible());
-        $this->get('session')->set('visibleSvg',$uneSvg[0]->getVisible());
-        $this->get('session')->set('visibleRadio',$uneRadio[0]->getVisible());
-        $this->get('session')->set('visibleApp',$uneAppli[0]->getVisible());
+        $this->get('session')->set('visibleIfo',$visibleInfo);
+        $this->get('session')->set('visibleSvg', $visibleAppli);
+        $this->get('session')->set('visibleRadio',$visibleSvg);
+        $this->get('session')->set('visibleApp',$visibleRadio);
 
     }
 }
