@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
@@ -10,9 +9,11 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="utf-8">
-    <link rel="icon" href="{{ asset('MDMeditec/public/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('MDMeditec/public/images/S2iP.ico') }}" type="image/x-icon">
     {% block meta %}
-        
+      <meta name="description" content="Spécialisé dans l’imagerie et informatique dentaire depuis 2005 Meditec Dental intervient chez les chirurgiens-dentistes pour résoudre durablement vos problèmes" />
+      <meta name="keywords" content="Meditec,dental,meditec dental,informatique,dentaire,radiologie,radiologies,capteur,générateur,dentiste,cabinet dentaire,julie,owandy,matériel dentaire,imagerie 3D,i-max,intra-oral,
+        opteo,one,owandy cam,Owandy-RX,Owandy-CR2,easyste,logiciels d’imagerie">
     {% endblock %}
     <!-- Stylesheets-->
 	{% block style %}
@@ -50,11 +51,6 @@
                 <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".list-inline" type="submit"><span></span></button><a class="fa-envelope" href="mailto:info@groupe-s2i.fr">info@groupe-s2i.fr</a><a class="fa-mobile-phone preffix-2" href="callto:0442843450">04-42-84-34-50</a>
                 <ul class="list-inline pull-right">
                   <li><a class="fa-facebook" href="#"></a></li>
-                  <li><a class="fa-twitter" href="#"></a></li>
-                  <li><a class="fa-pinterest-p" href="#"></a></li>
-                  <li><a class="fa-vimeo" href="#"></a></li>
-                  <li><a class="fa-google-plus" href="#"></a></li>
-                  <li><a class="fa-rss" href="#"></a></li>
                   <li class="text-left"><a class="fa-envelope" href="mailto:info@groupe-s2i.fr">info@groupe-s2i.fr</a></li>
                   <li class="text-left"><a class="fa-mobile-phone" href="callto:0442843450">04-42-84-34-50</a></li>
                 </ul>
@@ -69,33 +65,14 @@
                 <div class="rd-navbar-brand"><a class="brand-name" href="./"><img src="{{ asset('MDMeditec/public/images/meditec-dental-gris.png') }}" alt="Meditec dental"/></a></div>
               </div>
               <div class="rd-navbar-nav-wrap">
-                <!-- RD Navbar Search
-                <div class="rd-navbar-search">
-                  <form class="rd-search rd-navbar-search-form" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
-                    <label class="rd-navbar-search-form-input">
-                      <input type="text" name="s" placeholder="Search.." autocomplete="off">
-                    </label>
-                    <button class="rd-navbar-search-form-submit fa-shopping-cart" type="submit"></button>
-                  </form>
-                  <div class="rd-search-results-live rd-navbar-live-search-results" id="rd-search-results-live"></div>
-                  <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search, .rd-navbar-live-search-results" type="submit"></button>
-                </div>-->
-                <!-- RD Navbar Nav-->
                 <ul class="rd-navbar-nav">
                   <li class="active"><a href="./">Accueil</a></li>
-                  <li><a href="{{ path('MD_Informatique') }}">Informatique</a>
-                    <!-- RD Navbar Dropdown-->
-         
-                  </li>
-                  <li><a href="{{ path('MD_Radiologie') }}">Radiologie</a>
-                    <!-- RD Navbar Dropdown-->
-       
-                  </li>
-                  <li><a href="{{ path('MD_Sauvegarde') }}">Sauvegarde</a>
-                    <!-- RD Navbar Dropdown-->
-                  </li>
-                  <li><a href="{{ path('MD_Application') }}">Nos applications</a></li>
-			<li><a href="{{ path('MD_Contact') }}">Contact</a>
+                 {%  if visibleInfo == 1 %} <li><a href="{{ path('MD_Informatique') }}">Informatique</a></li>{% endif %}
+                 {% if visibleRadio == 1 %} <li><a href="{{ path('MD_Radiologie') }}">Radiologie</a></li>{% endif %}
+                 {% if visibleSvg == 1 %} <li><a href="{{ path('MD_Sauvegarde') }}">Sauvegarde</a></li>{% endif %}
+                 {% if visibleApp == 1 %} <li><a href="{{ path('MD_Application') }}">Nos applications</a></li> {% endif %}
+                  <li><a href="{{ path('MD_Financement') }}">Financement</a></li>
+			      <li><a href="{{ path('MD_Contact') }}">Contact</a>
                     <!-- RD Navbar Dropdown-->
                   </li>
                 </ul>

@@ -21,6 +21,13 @@
         {% endif %}
     </div>
     <div class="row row-45 ">
+        <div class="col-12 text-left">
+            <div class="form-wrap">
+                <label class="checkbox-inline ">
+                    {{ form_widget(form.visible) }}<span>Publier</span>
+                </label>
+            </div>
+        </div>
       <div class="col-6 col-md-6 c ol-lg-6 text-center text-lg-left">
           {{ form_label(form.titre, "Titre de la page", {'label_attr': {'class': 'form-label'}}) }}
           {{ form_widget(form.titre, {'attr': {'class': 'form-input'}}) }}

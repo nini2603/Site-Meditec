@@ -6,13 +6,16 @@ use MD\MeditecBundle\Entity\Newsletter;
 use MD\MeditecBundle\Form\NewsletterType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+
 
 
 class AccueilController extends Controller
 {
     public function indexAction(Request $request)
     {
+        $this->menuVisible();//init menu
+        $this->menuVisible();//init menu
+
     //-----------------------Variable
      $message = null;   $errors = null;
     //-----------------------Newsletter 
@@ -83,8 +86,35 @@ class AccueilController extends Controller
             'lstActualite'=>$listeActualite,
             'lstPartenaire'=>$listePartenaire,
             "listeChiffre" => $listeChiffre,
-        ));
+            "visibleInfo" => $this->get('session')->get('visibleIfo'),
+            "visibleApp" => $this->get('session')->get('visibleApp'),
+            "visibleSvg" => $this->get('session')->get('visibleSvg'),
+            "visibleRadio" => $this->get('session')->get('visibleRadio'),
+      ));
     }
-    
-    
+
+    /**
+     * fonction affichage du menu en selon les la visibilité des page
+     */
+    public function menuVisible(){
+        //Requete info visibilité
+        $em = $this->getDoctrine()->getManager();
+        $unInfo = $em->getRepository('MDMeditecBundle:Informatique')->findOnlyOne();
+
+        //Requete Application
+        $uneAppli = $em->getRepository('MDMeditecBundle:Application')->findOnlyOne();
+
+        //Requete Sauvegarde
+        $uneSvg = $em->getRepository('MDMeditecBundle:Sauvegarde')->findOnlyOne();
+
+        //Requete Radiologie
+        $uneRadio = $em->getRepository('MDMeditecBundle:Radiologie')->findOnlyOne();
+
+
+        $this->get('session')->set('visibleIfo',$unInfo[0]->getVisible());
+        $this->get('session')->set('visibleSvg',$uneSvg[0]->getVisible());
+        $this->get('session')->set('visibleRadio',$uneRadio[0]->getVisible());
+        $this->get('session')->set('visibleApp',$uneAppli[0]->getVisible());
+
+    }
 }

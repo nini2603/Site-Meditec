@@ -178,6 +178,13 @@ class Sauvegarde
     private $text4;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="visible", type="boolean")
+     */
+    private $visible;
+
+    /**
      *
      * 
      */
@@ -237,7 +244,30 @@ class Sauvegarde
     {
      $this->file = $file;
     }
-    
+
+    /**
+     * Get visible
+     *
+     * @return bool
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     *
+     * @return Informatique
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
     
     /**
      * Get id

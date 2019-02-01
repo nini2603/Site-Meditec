@@ -30,6 +30,10 @@ class SecurityController extends Controller
           'error'         => $authenticationUtils->getLastAuthenticationError(),
           'errors' => $errors,
           'msg' => $message,
+            "visibleInfo" => $this->get('session')->get('visibleIfo'),
+            "visibleApp" => $this->get('session')->get('visibleApp'),
+            "visibleSvg" => $this->get('session')->get('visibleSvg'),
+            "visibleRadio" => $this->get('session')->get('visibleRadio'),
         ));
     }
     

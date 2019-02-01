@@ -17,7 +17,11 @@ class ContactController extends Controller
 
       return $this->render('MDMeditecBundle:Contact:contact.html.twig', array(
           'msg' => '',
-          'errors' => ''
+          'errors' => '',
+          "visibleInfo" => $this->get('session')->get('visibleIfo'),
+          "visibleApp" => $this->get('session')->get('visibleApp'),
+          "visibleSvg" => $this->get('session')->get('visibleSvg'),
+          "visibleRadio" => $this->get('session')->get('visibleRadio'),
       ));
     }
     

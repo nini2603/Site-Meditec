@@ -16,6 +16,9 @@ MD_Sauvegarde:
 MD_Application:
     path: /application
     defaults: { _controller: MDMeditecBundle:Application:index }
+MD_Financement:
+  path: /financement
+  defaults: { _controller: MDMeditecBundle:Financement:index }
 
 #routing espace administration
 MD_Admin:

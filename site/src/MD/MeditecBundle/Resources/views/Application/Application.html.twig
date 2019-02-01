@@ -1,7 +1,13 @@
 {% extends "::meditec.html.twig" %}
 
-{% block  title %}
-{{ parent() }} - Application {% endblock %}
+
+{% block  title %}{{ parent() }} - Application {% endblock %}
+
+{% block meta %}
+  <meta name="description" content="Meditec Dental innove en vous proposant une application pour gérer et suivre vos stérilisations." />
+  <meta name="keywords" content="Meditec,dental,meditec dental,informatique,dentaire,radiologie,radiologies,capteur,générateur,dentiste,cabinet dentaire,Easyste,stérilisation,application,développement">
+{% endblock %}
+
 {% block selection %} {% endblock %}
 {% block contend %}
     <!-- Page-->

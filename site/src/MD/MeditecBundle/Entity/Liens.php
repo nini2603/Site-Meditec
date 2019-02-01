@@ -73,7 +73,7 @@ class Liens
     /**
      * Set visible
      *
-     * @param bool $visible
+     * @param boolean $visible
      *
      * @return Liens
      */

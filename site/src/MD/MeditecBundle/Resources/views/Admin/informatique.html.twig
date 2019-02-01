@@ -21,18 +21,25 @@
         {% endif %}
     </div>
     <div class="row row-45 ">
+        <div class="col-12 text-left">
+            <div class="form-wrap">
+                <label class="checkbox-inline ">
+                    {{ form_widget(form.visible) }}<span>Publier</span>
+                </label>
+            </div>
+        </div>
       <div class="col-6 col-md-6 c ol-lg-6 text-center text-lg-left">
           {{ form_label(form.titre, "Titre de la page", {'label_attr': {'class': 'form-label'}}) }}
           {{ form_widget(form.titre, {'attr': {'class': 'form-input'}}) }}
         <br/>
-        <div class="input-group">
-            <label class="input-group-btn" required="required">
+          <div class="input-group">
+              <label class="input-group-btn" required="required">
                 <span class="btn btn-success btn-xs" >
                     Image&hellip;{{ form_widget(form.file, {'attr': {'style': 'display: none','onchange':'handleFiles(files)'}}) }}
                 </span>
-            </label>
-            <input type="text" class="form-input" readonly>
-        </div>
+              </label>
+              <input type="text" class="form-input" readonly>
+          </div>
         <br/>
         <div class="input-group">
              {{ form_label(form.alt, "ALT ...", {'label_attr': {'class': 'form-label'}}) }}

@@ -8,7 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class SauvegardeType extends AbstractType
 {
@@ -18,6 +18,7 @@ class SauvegardeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+                ->add('visible', CheckboxType::class, array('required'  => false))
                 ->add('alt', TextType::class)
                 ->add('file', FileType::class, array('required'  => false))
                 ->add('titre', TextType::class)
